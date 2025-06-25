@@ -2465,7 +2465,7 @@ min-width: 300px;
 .woocommerce-checkout .woocommerce-billing-fields h3{
     font-family: "Goldman", sans-serif !important;
     font-size:28px;
-    font-weight:800;
+    font-weight:600;
 }
 
 
@@ -2518,7 +2518,7 @@ min-width: 300px;
  .order-heading2{
     font-family: "Goldman", sans-serif !important;
     font-size:28px;
-    font-weight:800;
+    font-weight:600;
 }
 
 
@@ -2862,7 +2862,7 @@ min-width: 300px;
 
 
 .single-product .product-page-layout .swiper-button-next svg, .swiper-button-prev svg{
-	transform: scale(1.4);
+	transform: scale(1.3);
 }
 
 .woocommerce-checkout #coupon_code{
@@ -3187,3 +3187,79 @@ box-shadow: -2px 21px 14px -12px rgba(0,0,0,0.1);
 	position:relative!important;
 }
  */
+
+ .single-product .product-gallery .swiper-button-next{
+    right:5px;
+ }
+
+ .single-product .product-gallery .swiper-button-prev{
+    left:5px;
+ }
+
+
+ /* Fixes */
+
+.archive .noUi-connects{
+    background: black!important;
+}
+.archive .noUi-connect{
+    background: #a99577!important;
+}
+
+.archive .noUi-horizontal{
+height:6px;
+}
+
+.archive .noUi-horizontal .noUi-handle {
+height: 16px;
+width: 17px;
+cursor:pointer!important;
+}
+
+.btn-key{
+text-decoration:none!important;
+}
+
+
+.payment_box{
+font-family: var(--e-global-typography-text-font-family), Sans-serif;
+font-weight: var(--e-global-typography-text-font-weight);
+color: var(--e-global-color-text)!important;
+background-color: var(--e-global-color-1471597)!important;
+border-radius: 0px 0px 0px 0px!important;
+}
+
+.payment_box iframe{
+margin-top: 10px !important;
+
+}
+
+
+#add_payment_method #payment div.payment_box::before, .woocommerce-cart #payment div.payment_box::before, .woocommerce-checkout #payment div.payment_box::before{
+display:none!important;
+}
+
+
+.woocommerce-checkout .elementor-menu-cart__product-name a{
+font-size:16px;
+color:#aa9677;
+font-family: "Goldman Regular" !important;
+}
+
+
+.archive .choices__list--multiple .choices__item{
+    background-color: #eee!important;
+display:flex;
+max-width:fit-content;
+     
+}
+
+.archive .choices[data-type*=select-multiple] .choices__button, .choices[data-type*=text] .choices__button {
+border:none;
+margin-left:0px;
+}
+
+.archive .choices__list--multiple{
+display:flex;
+flex-wrap:wrap;
+}

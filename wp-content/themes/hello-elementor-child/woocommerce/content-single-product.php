@@ -9,6 +9,9 @@ if (post_password_required()) {
     echo get_the_password_form();
     return;
 }
+
+// Enqueue required variation script
+wp_enqueue_script('wc-add-to-cart-variation');
 ?>
 
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class('', $product); ?>>
@@ -16,9 +19,7 @@ if (post_password_required()) {
 
         <div class="product-gallery">
             <?php do_action('woocommerce_before_single_product_summary'); ?>
-			
-			<?php echo do_shortcode('[acf_share_buttons]'); ?>
-			
+            <?php echo do_shortcode('[acf_share_buttons]'); ?>
         </div>
 
         <div class="product-summary2 summary entry-summary">
@@ -38,71 +39,66 @@ if (post_password_required()) {
                         <span class="count">(<?php echo $product->get_rating_count(); ?> reviews)</span>
                     <?php endif; ?>
                 </div>
-				
             </div>
-				<div class="promo-title">
-					<?php echo get_field('promotion_title');?>
-				</div>
+
+            <div class="promo-title">
+                <?php echo get_field('promotion_title'); ?>
+            </div>
+
             <hr style="margin: 2rem 0;">
 
-     
-
             <?php
-            if ($product->is_type('variable')) {
-                wc_get_template('single-product/add-to-cart/variable.php', [
-                    'available_variations' => $product->get_available_variations(),
-                    'attributes'           => $product->get_variation_attributes(),
-                    'selected_attributes'  => $product->get_default_attributes(),
-                ]);
+            if ($product && $product->is_type('variable')) {
+                do_action('woocommerce_before_add_to_cart_form');
+                ?>
+
+                <form class="variations_form cart"
+                      method="post"
+                      enctype="multipart/form-data"
+                      data-product_id="<?php echo esc_attr($product->get_id()); ?>"
+                      data-product_variations="<?php echo esc_attr(json_encode($product->get_available_variations())); ?>">
+                    <?php
+                    wc_get_template('single-product/add-to-cart/variable.php', [
+                        'available_variations' => $product->get_available_variations(),
+                        'attributes'           => $product->get_variation_attributes(),
+                        'selected_attributes'  => $product->get_default_attributes(),
+                    ]);
+                    ?>
+                </form>
+
+                <?php
+                do_action('woocommerce_after_add_to_cart_form');
             } elseif ($product->is_purchasable() && $product->is_in_stock()) {
                 echo wc_get_stock_html($product);
+                do_action('woocommerce_before_add_to_cart_form');
                 ?>
-                <?php do_action('woocommerce_before_add_to_cart_form'); ?>
                 <form class="cart custom-qty-wrapper" method="post" enctype="multipart/form-data">
                     <div class="quantity-wrapper2" style="display: flex; align-items: center; gap: 10px;">
-                    
-
-
-
-
-
-              <div class="inputs-row">
-
-                        <?php
-                        do_action('woocommerce_before_add_to_cart_button');
-                        do_action('woocommerce_before_add_to_cart_quantity');
-                        ?>
-    <button type="button" class="qty-btn minus">
-                         &#65123;
-                        </button>
-<?php
-                        woocommerce_quantity_input([
-                            'min_value'   => $product->get_min_purchase_quantity(),
-                            'max_value'   => $product->get_max_purchase_quantity(),
-                            'input_value' => $product->get_min_purchase_quantity(),
-                       
-                        ]);
-
-                
-
-                        do_action('woocommerce_after_add_to_cart_quantity');
-                        ?>
-
-                        <button type="button" class="qty-btn plus">
-                        &#65122;
-                        </button>
-                        <button type="submit" name="add-to-cart" value="<?php echo esc_attr($product->get_id()); ?>"
-                                id="simple-btn" class="single_add_to_cart_button button alt">
-                            <?php echo esc_html($product->single_add_to_cart_text()); ?>
-                        </button>
-
+                        <div class="inputs-row">
+                            <?php
+                            do_action('woocommerce_before_add_to_cart_button');
+                            do_action('woocommerce_before_add_to_cart_quantity');
+                            ?>
+                            <button type="button" class="qty-btn minus">&#65123;</button>
+                            <?php
+                            woocommerce_quantity_input([
+                                'min_value'   => $product->get_min_purchase_quantity(),
+                                'max_value'   => $product->get_max_purchase_quantity(),
+                                'input_value' => $product->get_min_purchase_quantity(),
+                            ]);
+                            do_action('woocommerce_after_add_to_cart_quantity');
+                            ?>
+                            <button type="button" class="qty-btn plus">&#65122;</button>
+                            <button type="submit" name="add-to-cart" value="<?php echo esc_attr($product->get_id()); ?>"
+                                    id="simple-btn" class="single_add_to_cart_button button alt">
+                                <?php echo esc_html($product->single_add_to_cart_text()); ?>
+                            </button>
                         </div>
                     </div>
                     <?php do_action('woocommerce_after_add_to_cart_button'); ?>
-         
                 </form>
-                <?php do_action('woocommerce_after_add_to_cart_form'); ?>
                 <?php
+                do_action('woocommerce_after_add_to_cart_form');
             }
             ?>
 
@@ -155,13 +151,20 @@ if (post_password_required()) {
                     ?>
                 </div>
             </div>
-
-        </div> <!-- .product-summary2 -->
-    </div> <!-- .product-page-layout -->
-</div> <!-- #product -->
+        </div>
+    </div>
+</div>
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
+    // INIT variation form (important fix!)
+    const variationForms = jQuery('.variations_form');
+    if (variationForms.length) {
+        variationForms.each(function () {
+            jQuery(this).wc_variation_form();
+        });
+    }
+
     const productId = <?php echo get_the_ID(); ?>;
     const wishlist = JSON.parse(localStorage.getItem('custom_wishlist')) || [];
     const container = document.getElementById('wishlist-button-container');
