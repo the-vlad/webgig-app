@@ -1,0 +1,105 @@
+
+#the-warranty-form form label{
+color: white;
+font-family: "Goldman", Sans-serif;
+font-size: 16px;
+font-weight: 400;
+line-height: 36px;
+}
+
+#the-warranty-form form input{
+background:white;
+border:none;
+  font-family: "Goldman", Sans-serif;
+color:black;
+/* height:35px; */
+}
+
+/* #the-warranty-form form {
+  border:2px solid #aa9677;
+} */
+
+#warranty-menu{
+  height:fit-content;
+}
+
+
+#the-warranty-form form legend{
+    color: white;
+font-family: "Goldman", Sans-serif;
+font-size: 16px;
+font-weight: 400;
+line-height: 36px;
+}
+
+#the-warranty-form .gchoice{
+display:flex;
+align-items:center;
+}
+
+#the-warranty-form #gform_submit_button_6{
+color:#aa9677;
+border:2px solid #aa9677;
+background:transparent;
+}
+
+#the-warranty-form form{
+padding:25px;
+padding-top:5px;
+}
+
+#the-warranty-form {
+/* 	max-width:65%; */
+display:flex;
+/* 	margin:0 auto; */
+ display:flex;
+
+}
+
+/* #the-warranty-form  form{
+ max-width:50%;
+} */
+/* .elementor-element-5651803{
+  display:none!important;
+} */
+
+.warranty-instructions-content{
+  color: white;
+  font-family: "Goldman", Sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 36px;
+  padding-bottom:25px;
+}
+
+.warranty-notice{
+  color:white;
+  font-family: "Goldman", Sans-serif;
+  font-size:14px;
+  opacity:0.7;
+}
+
+.my-warranty h3 {
+  color:white;
+  font-family: "Goldman", Sans-serif;
+  font-weight:bold;
+  font-size:17px;
+  background-image:linear-gradient(226deg, var( --e-global-color-secondary ) 14%, #AA9677 100%);
+  padding:10px 15px;
+  text-transform:uppercase;
+
+}
+
+.my-warranty ul{
+  color:white;
+  font-family: "Goldman", Sans-serif;
+  font-size:14px;
+  list-style-type: none;
+  padding-left:0px;
+}
+
+.my-warranty ul strong{
+  color:#AA9677;
+  font-family: "Goldman", Sans-serif;
+  font-size:14px;
+}

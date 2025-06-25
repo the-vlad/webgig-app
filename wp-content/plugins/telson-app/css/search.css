@@ -1,0 +1,233 @@
+.error404 .elementor-grid .product_title{
+    font-family: "Goldman", sans-serif!important;
+    font-size: 22px!important;
+    font-weight: 400!important;
+    text-align:center;
+    padding-top:5px;
+    text-transform:none!important;
+}
+
+.error404 .elementor-grid .amount{
+    font-family: "Oswald", sans-serif !important;
+    font-size: 18px;
+    font-weight: 420;
+ 
+}
+
+.error404 .elementor-grid .price{
+    margin-top:10px;
+    margin-bottom: 20px!important;    
+}
+
+
+
+.error404 .elementor-grid .button{
+    display: flex !important;
+    justify-content: center;
+    margin: 0 auto !important;
+    margin-top: 16px !important;
+    max-width: fit-content;
+    background: transparent !important;
+    border: 1px solid #212121 !important;
+    border-radius: 0px !important;
+    box-shadow: none !important;
+    font-family: "Goldman", sans-serif !important;
+    font-weight: 200 !important;
+    color: #212121 !important;
+    transition: all 0.1s ease-in-out;
+    letter-spacing:0px!important;
+}
+
+.error404 .elementor-grid .button:hover{
+    background:black!important;
+    color:white!important;
+}
+
+
+#ta-product-search{
+    font-family: "Oswald", sans-serif !important;
+    font-size: 14px;
+    font-weight: 420;
+    outline:none!important;
+}
+
+.ta-product-search-wrapper{
+    max-width: 30%;
+    margin: 0 auto;
+    display: flex;
+    margin-top:20px;
+    height:47.7px;
+    border-radius:0px;
+    position:relative;
+}
+
+#ta-product-results{
+    /* max-width: 30%; */
+    width:100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding-left:0px!important;
+    position:absolute;
+    background:#41453b!important;
+    z-index: 99;
+    left: 50%;
+    top:100%;
+    transform: translateX(-50%);
+    padding-bottom: 5px;
+}
+
+#ta-product-results li {
+    padding:5px;
+}
+
+#ta-product-results span{
+    color:white;
+}
+
+
+#ta-product-results div{
+    color:white;
+    font-family: "Goldman", sans-serif !important;
+    font-size:16px;
+
+}
+
+#ta-product-results .amount{
+    font-family: "Oswald", sans-serif!important;
+    font-size:12px;
+    font-weight:420;
+
+}
+
+
+.search-results .telson-filters-wrapper{
+    display:none!important;
+}
+
+.search-results .product img{
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.5)!important;
+
+}
+
+
+.search-results{
+    background:white!important;
+}
+
+
+.search-results .product .button{
+    display: flex !important;
+    justify-content: center;
+    margin: 0 auto !important;
+    margin-top: 16px !important;
+    max-width: fit-content;
+    background: transparent !important;
+    border: 1px solid #212121 !important;
+    border-radius: 0px !important;
+    box-shadow: none !important;
+    font-family: "Goldman", sans-serif !important;
+    font-weight: 200 !important;
+    color: #212121 !important;
+    transition: all 0.1s ease-in-out;
+}
+
+.search-results .product h2 {
+    font-family: "Goldman", sans-serif!important;
+    font-size: 22px!important;
+    font-weight: 400!important;
+    text-align:center;
+    padding-top:5px;
+}
+
+.search-results .product .price {
+    text-align: center!important;
+    display:flex;
+    align-items: center;
+    margin:0 auto!important;
+}
+
+
+.search-results .product .star-rating {
+    display:none!important;
+}
+
+.search-results .product .price .amount {
+    font-family: "Oswald", sans-serif !important;
+    font-size: 18px;
+    font-weight: 420;
+}
+
+.search-results .woocommerce-result-count{
+    font-family: 'Montserrat', sans-serif!important;
+}
+
+
+.switch-tab svg{
+    width:16px;
+    height:auto;
+}
+
+.switch-tab svg path{
+    fill:#ffffff!important;
+}
+
+.switch-tab {
+    border:1px solid white!important;
+    padding:0px!important;
+    margin-left:5px;
+    height:24px;
+}
+
+
+.switch-tab:hover{
+    background:#aa9677!important;
+}
+
+#ta-search-button{
+    margin-left:-5px;
+    border-radius:0px!important;
+}
+
+#ta-search-button svg{
+    fill:white!important;
+    width:15px;
+    height:auto;
+}
+
+#ta-search-button svg path{
+    fill:white!important;
+
+}
+
+
+#see-all-results{
+    font-family: "Oswald", sans-serif !important;
+    font-size: 14px!important;
+    font-weight: 420;
+    background:#b29a73!important;
+    justify-content: flex-start;
+    display: flex;
+    max-width: fit-content!important;
+    padding:4px!important;
+    border-radius:0px!important;
+}
+
+
+.count-results{
+    color:white!important;
+    font-size:14px;
+    border:0px!important;
+    font-family: "Goldman", sans-serif !important;
+    font-weight:200;
+    position:absolute;
+}
+
+.woocommerce-edit-address .woocommerce-MyAccount-content form button{
+    background:black;
+}
+
+.woocommerce-EditAccountForm .woocommerce-Button:hover{
+    background:transparent;
+}

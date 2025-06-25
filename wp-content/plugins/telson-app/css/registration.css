@@ -1,0 +1,153 @@
+.woocommerce-account {
+    background:white;
+ 
+
+}
+
+
+.woocommerce-account #customer_login {
+    background:white;
+    max-width: 80%;
+    margin:0 auto;
+    padding-top:50px;
+    padding-bottom: 50px;
+}
+
+
+.woocommerce-account #customer_login form h2{
+    text-align: center;
+    font-size:32px;
+    font-family: "Goldman", Sans-serif;
+    font-weight:600;
+}
+
+
+.woocommerce-account #customer_login form label{
+    font-size:16px;
+    font-family: "Goldman", Sans-serif;
+    /* font-weight:600; */
+}
+
+
+.woocommerce-account #customer_login form p{
+    font-size:16px;
+    font-family: "Oswald", Sans-serif!important;
+    font-weight:420;
+    /* font-weight:600; */
+}
+
+.woocommerce-account #customer_login form .woocommerce-button{
+    color:#aa9677;
+    background-color:#000000;
+    padding:9px 16px;
+    font-family: "Goldman", Sans-serif;
+    font-weight:500;
+
+}
+
+
+.woocommerce-account #customer_login form .woocommerce-Input {
+    font-family: "Goldman", Sans-serif;
+}
+
+
+.woocommerce-lost-password{
+    background:white;
+}
+
+.woocommerce-lost-password form {
+    padding-top:50px;
+    padding-bottom: 50px;
+    max-width: 80%;
+    display: flex;
+    margin:0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.woocommerce-lost-password form button {
+    color:#aa9677!important;
+    background-color:#000000!important;
+    padding:9px 16px;
+    font-family: "Goldman", Sans-serif!important;
+    font-weight:500!important;
+}
+
+.woocommerce-lost-password form label{
+    font-size:16px!important;
+    font-family: "Goldman", Sans-serif!important;
+}
+
+.woocommerce-account #customer_login form .woocommerce-Input {
+    font-family: "Goldman", Sans-serif!important;
+}
+
+
+.woocommerce-lost-password form p{
+    font-size:16px;
+    font-family: "Oswald", Sans-serif!important;
+    font-weight:420;
+}
+
+
+.woocommerce-cart .e-cart-section .shop_table{
+    border:0px!important;
+}
+
+.woocommerce-cart .coupon{
+    border:1px solid black!important;
+}
+
+
+.woocommerce-cart .shop_table button{
+    display:none;
+}
+
+.woocommerce-cart .quantity-wrapper{
+width:50px;
+}
+
+
+.woocommerce-cart {
+    background:white!important;
+
+
+}
+
+.woocommerce-cart .woocommerce{
+    max-width:90%;
+    margin:0 auto;
+    display:flex;
+    flex-direction: column;
+}
+
+.woocommerce-cart h1{
+    max-width:90%;
+    margin:0 auto;
+    display:flex;
+    flex-direction: column;
+}
+
+.woocommerce-cart 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: auto!important;
+    margin: 0;
+}
+
+/* For Firefox */
+.woocommerce-cart [type=number] {
+    -moz-appearance: number-input!important;
+}
+
+.woocommerce-cart .product-name{
+    font-family: "Goldman", Sans-serif!important;
+    font-size:14px;
+}
+
+.woocommerce-cart .variation p{
+    font-family: "Oswald", Sans-serif!important;
+    font-size:14px;
+    font-weight:320;
+}
