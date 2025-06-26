@@ -89,9 +89,35 @@ add_action('woocommerce_review_order_before_payment', 'custom_checkout_coupon_be
 // });
 
 
+
+
+
 add_filter('woocommerce_update_order_review_fragments', function($fragments) {
     ob_start();
     wc_print_notices();
     $fragments['.woocommerce-notices-wrapper'] = ob_get_clean();
     return $fragments;
 });
+
+
+add_filter('woocommerce_cart_item_name', function($name, $cart_item, $cart_item_key) {
+    $product = $cart_item['data'];
+    
+    $regular_price = $product->get_regular_price();
+    $sale_price    = $product->get_price();
+
+    if ($regular_price > $sale_price) {
+        $qty = $cart_item['quantity'];
+        $total_discount = ($regular_price - $sale_price) * $qty;
+
+        $discount_html = sprintf(
+            '<br><small style="color:grey;">Discount: -%s</small>',
+            wc_price($total_discount)
+        );
+
+        return $name . $discount_html;
+    }
+
+    return $name;
+}, 10, 3);
+

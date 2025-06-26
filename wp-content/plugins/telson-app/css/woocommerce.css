@@ -3263,3 +3263,113 @@ margin-left:0px;
 display:flex;
 flex-wrap:wrap;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+ .woocommerce-checkout .elementor-menu-cart__product-name a{
+	font-size:14px!important;
+	color:#222222!important;
+    font-family: "Goldman Regular" !important;
+} 
+
+.woocommerce-checkout .elementor-element.elementor-element-ff3f7f2 .elementor-button--checkout{
+	background:black;
+	font-family: 'Oswald';
+  text-transform: uppercase;
+	font-size: 14px;
+ font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+	color:#c5c3bb;
+}
+
+.woocommerce-checkout .elementor-element.elementor-element-ff3f7f2 .elementor-button--checkout:hover{
+	background:#aa9677!important;
+	color:white!important;
+}
+
+.woocommerce-checkout  .elementor-element.elementor-element-ff3f7f2 .elementor-button--view-cart{
+	display:none;
+	font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+	background:black!important;
+}
+
+.archive .choices__list--multiple .choices__item{
+	    background-color: #eee!important;
+	display:flex;
+	max-width:fit-content;
+	     
+}
+
+.archive .choices[data-type*=select-multiple] .choices__button, .choices[data-type*=text] .choices__button {
+	border:none;
+	margin-left:0px;
+}
+
+.archive .choices__list--multiple{
+	display:flex;
+	flex-wrap:wrap;
+}
+
+
+
+.woocommerce-checkout .elementor-menu-cart__product-name a{
+	font-size:14px!important;
+	color:#222222!important;
+    font-family: "Goldman Regular" !important;
+} 
+
+.woocommerce-checkout .elementor-element.elementor-element-ff3f7f2 .elementor-button--checkout{
+	background:black;
+	font-family: 'Oswald';
+  text-transform: uppercase;
+	font-size: 14px;
+ font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+	color:#c5c3bb;
+}
+
+.woocommerce-checkout .elementor-element.elementor-element-ff3f7f2 .elementor-button--checkout:hover{
+	background:#aa9677!important;
+	color:white!important;
+}
+
+.woocommerce-checkout  .elementor-element.elementor-element-ff3f7f2 .elementor-button--view-cart{
+	display:none;
+	font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+	background:black!important;
+}
+
+.archive .choices__list--multiple .choices__item{
+	    background-color: #eee!important;
+	display:flex;
+	max-width:fit-content;
+	     
+}
+
+.archive .choices[data-type*=select-multiple] .choices__button, .choices[data-type*=text] .choices__button {
+	border:none;
+	margin-left:0px;
+}
+
+.archive .choices__list--multiple{
+	display:flex;
+	flex-wrap:wrap;
+}
